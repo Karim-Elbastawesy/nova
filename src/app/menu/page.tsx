@@ -153,12 +153,6 @@ export default function MenuPage() {
     <main className="overflow-hidden bg-[#050505] text-[#F4F0E7]">
       {/* HERO */}
       <section className="relative min-h-[82vh] overflow-hidden">
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage: "url('/images/menu/menu-hero.jpg')",
-          }}
-        />
 
         <div className="absolute inset-0 bg-black/65" />
         <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-black/25 to-black/35" />
@@ -169,7 +163,7 @@ export default function MenuPage() {
           transition={{ duration: 1.8, ease: [0.16, 1, 0.3, 1] }}
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: "url('/images/menu/menu-hero.jpg')",
+            backgroundImage: "url('/images/menu/menu-hero.avif')",
           }}
         />
 
@@ -315,11 +309,10 @@ export default function MenuPage() {
               <button
                 key={category}
                 onClick={() => setActiveCategory(category)}
-                className={`relative shrink-0 px-5 py-3 text-[10px] uppercase tracking-[0.22em] transition-colors ${
-                  activeCategory === category
+                className={`relative shrink-0 px-5 py-3 text-[10px] uppercase tracking-[0.22em] transition-colors ${activeCategory === category
                     ? "text-[#D4AF37]"
                     : "text-white/35 hover:text-white"
-                }`}
+                  }`}
               >
                 {category}
 
