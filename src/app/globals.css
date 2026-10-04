@@ -1,26 +1,60 @@
 @import "tailwindcss";
 
+@theme {
+  --font-nova: var(--font-geist-sans);
+  --font-display: var(--font-instrument-serif);
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --nova-gold: #d4af37;
+  --nova-gold-light: #f3e5ab;
+  --nova-black: #050505;
+  --nova-cream: #f4f0e7;
+  --nova-muted: #a8a29e;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--nova-black);
+  color: var(--nova-cream);
+  font-family: var(--font-geist-sans);
+}
+
+::selection {
+  background: var(--nova-gold);
+  color: #050505;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--nova-black);
+}
+
+::-webkit-scrollbar-thumb {
+  background: color-mix(in srgb, var(--nova-gold) 40%, transparent);
+  border: 2px solid var(--nova-black);
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--nova-gold);
+}
+
+:focus-visible {
+  outline: 1px solid var(--nova-gold);
+  outline-offset: 3px;
+}
+
+.font-display {
+  font-family: var(--font-instrument-serif);
+}
+
+.font-nova {
+  font-family: var(--font-geist-sans);
 }
